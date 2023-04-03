@@ -191,7 +191,7 @@ def handleResponse(request):
     response = translate(request, encoder, decoder)[0]
     responseStruct = outputTriggerToOutputStruct(response)
     print(responseStruct)
-    if responseStruct['actionType'] == 'qanda':
+    if responseStruct['actionType'] == 'questionAndAnswer':
         return responseStruct['parameters']
     elif responseStruct['actionType'] == 'apiusage ':
       print("API CALL")
